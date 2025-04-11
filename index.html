@@ -1,137 +1,224 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sahrul Gunawan | Frontend Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="icon" type="image/png" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h2 class="logo"><span>S</span>ahrul.</h2>
-    <nav class="navigation">
-      <a href="#beranda">Beranda</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#proyek">Proyek</a>
-      <a href="#skill">Keahlian</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-    <a href="#kontak" class="btn-talk">Ayo Ngobrol</a>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahrul Gunawan | Frontend Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
 
-  <section class="home" id="beranda">
-    <div class="content">
-      <h2>Halo, saya <span>Sahrul Gunawan</span></h2>
-      <h4>Frontend Developer</h4>
-      <p>Sedang belajar ngoding dan semangat bikin karya digital.</p>
-      <div class="btn-group">
-        <a href="#kontak">Hubungi Saya</a>
-        <a href="#proyek">Lihat Proyek</a>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    
+    <header>
+      <h2 class="logo"><span>S</span>ahrul.</h2>
+      <nav class="navigation">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#skill">Keahlian</a>
+        <a href="#komunitas">Komunitas</a>
+      </nav>
+      <a href="#kontak" class="btn-talk">Ayo Ngobrol</a>
+
+      <input type="checkbox" id="dark-toggle" />
+      <label for="dark-toggle" class="toggle-label">
+        <i class="fas fa-moon"></i>
+      </label>
+    </header>
+
+    <section class="home" id="beranda">
+      <div class="content">
+        <h2>Halo, saya <span>Sahrul Gunawan</span></h2>
+        <h4>Frontend Developer</h4>
+        <p>Sedang belajar ngoding dan semangat bikin karya digital.</p>
+        <div class="btn-group">
+          <a href="#kontak">Hubungi Saya</a>
+          <a href="#proyek">Lihat Proyek</a>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
       </div>
-      <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+      <div class="profile-photo">
+        <img src="image/ruel.JPG" alt="Foto Sahrul" />
       </div>
-    </div>
+    </section>
 
-    <div class="profile-photo">
-      <img src="image/ruel.JPG" alt="Foto Sahrul">
-    </div>
-  </section>
+    <section id="tentang">
+      <h2 data-animate>Tentang Saya</h2>
+      <p>
+        Halo! Saya <strong>Sahrul Gunawan</strong>, seorang pembelajar mandiri
+        yang sedang menekuni dunia <strong>Frontend Web Development</strong>.
+        Saya suka membuat tampilan web yang bersih, simpel, dan mudah digunakan.
+      </p>
+      <p>
+        Saat ini saya fokus belajar HTML, CSS, dan JavaScript. Tujuan saya
+        adalah menjadi developer yang bisa bantu bisnis kecil atau personal
+        brand punya website yang keren dan fungsional.
+      </p>
+      <p>
+        Saya percaya dengan konsistensi, karya saya akan terus berkembang.
+        Portofolio ini adalah langkah pertama saya. Terima kasih sudah mampir!
+      </p>
+    </section>
 
-  <section id="tentang">
-    <h2 data-animate>Tentang Saya</h2>
-    <p>
-      Halo! Saya <strong>Sahrul Gunawan</strong>, seorang pembelajar mandiri yang sedang menekuni dunia <strong>Frontend Web Development</strong>.  
-      Saya suka membuat tampilan web yang bersih, simpel, dan mudah digunakan.
-    </p>
-    <p>
-      Saat ini saya fokus belajar HTML, CSS, dan JavaScript. Tujuan saya adalah menjadi developer yang bisa bantu bisnis kecil atau personal brand punya website yang keren dan fungsional.
-    </p>
-    <p>
-      Saya percaya dengan konsistensi, karya saya akan terus berkembang. Portofolio ini adalah langkah pertama saya. Terima kasih sudah mampir!
-    </p>
-  </section>
+    <section id="proyek">
+      <h2 class="warna">Proyek Saya</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <img src="image/pages.png" alt="Landing Page Project" />
+          <h3>Landing Page Sederhana</h3>
+          <p>
+            Website satu halaman yang saya buat dengan HTML dan CSS. Fokus pada
+            tampilan bersih dan responsive.
+          </p>
+          <a
+            href="https://ruel-code.github.io/myproject/page.html"
+            target="_blank"
+            >Lihat Demo</a
+          >
+        </div>
 
-  <section id="proyek">
-    <h2 class="warna">Proyek Saya</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <img src="image/pages.png" alt="Landing Page Project">
-        <h3>Landing Page Sederhana</h3>
-        <p>Website satu halaman yang saya buat dengan HTML dan CSS. Fokus pada tampilan bersih dan responsive.</p>
-        <a href="https://ruel-code.github.io/myproject/page.html" target="_blank">Lihat Demo</a>
+        <div class="project-card">
+          <img src="image/form.png" alt="Form Kontak Project" />
+          <h3>Form Kontak</h3>
+          <p>
+            Formulir sederhana yang nantinya akan saya sambungkan ke Google
+            Sheets atau Email. Dibuat dengan HTML, CSS, dan JavaScript.
+          </p>
+          <a
+            href="https://ruel-code.github.io/myproject/from.html"
+            target="_blank"
+            >Lihat Demo</a
+          >
+        </div>
       </div>
-  
-      <div class="project-card">
-        <img src="image/form.png" alt="Form Kontak Project">
-        <h3>Form Kontak</h3>
-        <p>Formulir sederhana yang nantinya akan saya sambungkan ke Google Sheets atau Email. Dibuat dengan HTML, CSS, dan JavaScript.</p>
-        <a href="https://ruel-code.github.io/myproject/from.html" target="_blank">Lihat Demo</a>
+    </section>
+
+    <section id="skill">
+      <h2>Keahlian Saya</h2>
+      <div class="skills-container">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript (dasar)</div>
+        <div class="skill-card">Git & GitHub</div>
+        <div class="skill-card">Belajar terus 💪</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skill">
-    <h2>Keahlian Saya</h2>
-    <div class="skills-container">
-      <div class="skill-card">HTML</div>
-      <div class="skill-card">CSS</div>
-      <div class="skill-card">JavaScript (dasar)</div>
-      <div class="skill-card">Git & GitHub</div>
-      <div class="skill-card">Belajar terus 💪</div>
-    </div>
-  </section>
-   
-  <section id="kontak">
-    <h2>Kontak Saya</h2>
-    <p>Ingin kerja bareng, kolaborasi, atau sekadar ngobrol soal project? Yuk hubungi saya lewat platform di bawah ini:</p>
-  
-    <div class="kontak-card">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:ruelsyah76@gmail.com">ruelsyah76@gmail.com</a>
-    </div>
-  
-    <div class="kontak-card">
-      <i class="fab fa-github"></i>
-      <a href="https://github.com/sahrulgunawan" target="_blank">github.com/sahrulgunawan</a>
-    </div>
-  
-    <div class="kontak-card">
-      <i class="fab fa-linkedin"></i>
-      <a href="https://linkedin.com/in/sahrulgunawan" target="_blank">linkedin.com/in/sahrulgunawan</a>
-    </div>
-  </section>
+    <section id="komunitas" class="komunitas-section">
+      <div class="container-komunitas">
+        <div class="komunitas-text">
+          <h2>Komunitas Kami</h2>
+          <p>
+            Kami adalah bagian dari komunitas belajar yang mendukung individu
+            dalam mengejar pengetahuan secara bebas dan bertanggung jawab.
+            Bersama, kami tumbuh melalui diskusi, kolaborasi, dan semangat
+            gotong royong.
+          </p>
+          <a
+            href="https://frecationer.com"
+            target="_blank"
+            class="btn-komunitas"
+            >Kunjungi Website Komunitas</a
+          >
+        </div>
+        <div class="komunitas-img">
+          <img src="image/bersama.JPG" alt="Foto Komunitas" />
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Sahrul Gunawan. Dibuat dengan ❤️ dan semangat belajar.</p>
-    <div class="footer-social">
-      <a href="https://github.com/sahrulgunawan" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/sahrulgunawan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="mailto:ruelsyah76@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </footer>  
-  
-  <script>
-    const animItems = document.querySelectorAll('[data-animate]');
-    window.addEventListener('scroll', () => {
-      animItems.forEach(item => {
-        const itemPos = item.getBoundingClientRect().top;
-        const winHeight = window.innerHeight;
-        if (itemPos < winHeight - 100) {
-          item.classList.add('active');
-        }
+    <section id="kontak">
+      <h2>Kontak Saya</h2>
+      <p>
+        Ingin kerja bareng, kolaborasi, atau sekadar ngobrol soal project? Yuk
+        hubungi saya lewat platform di bawah ini:
+      </p>
+
+      <div class="kontak-card">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:ruelsyah76@gmail.com">ruelsyah76@gmail.com</a>
+      </div>
+
+      <div class="kontak-card">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/ruel-code" target="_blank"
+          >github.com/sahrulgunawan</a
+        >
+      </div>
+
+      <div class="kontak-card">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://linkedin.com/in/syah-ruel" target="_blank"
+          >linkedin.com/in/sahrulgunawan</a
+        >
+      </div>
+
+      <div class="kontak-card">
+        <i class="fab fa-instagram"></i>
+        <a href="https://instagram.com/sahrulgunawan" target="_blank"
+          >@sahrulgunawan</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Sahrul Gunawan. Dibuat dengan ❤️ dan semangat belajar.</p>
+      <div class="footer-social">
+        <a href="https://github.com/ruel-code" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://linkedin.com/in/syah-ruel" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="mailto:ruelsyah76@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="https://instagram.com/sahrulgunawan" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script>
+      const animItems = document.querySelectorAll("[data-animate]");
+      window.addEventListener("scroll", () => {
+        animItems.forEach((item) => {
+          const itemPos = item.getBoundingClientRect().top;
+          const winHeight = window.innerHeight;
+          if (itemPos < winHeight - 100) {
+            item.classList.add("active");
+          }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+
+    <script>
+      const toggle = document.getElementById('dark-toggle');
+      toggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
+
+    
+    
+  </body>
 </html>

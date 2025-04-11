@@ -481,3 +481,139 @@ header {
 .warna{
   text-align: center;
 }
+
+/* Komunitas Section */
+
+.komunitas-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.container-komunitas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.komunitas-text {
+  flex: 1 1 400px;
+}
+
+.komunitas-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #8000ff;
+}
+
+.komunitas-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.btn-komunitas {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #8000ff; /* ungu */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-komunitas:hover {
+  background-color: #5e00c7; /* ungu lebih gelap saat hover */
+}
+
+
+.komunitas-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.komunitas-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle Switch */
+#dark-toggle {
+  display: none;
+}
+
+.toggle-label {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  margin-left: 1rem;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .btn,
+.dark-mode a {
+  color: #fff;
+}
+
+.dark-mode h2 {
+  color: #a855f7; /* Ungu */
+}
+
+/* menu toggle */
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1000;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #111;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+
+  .btn-talk {
+    display: none;
+  }
+}
