@@ -177,64 +177,97 @@ header {
   }
 
   #proyek {
-    padding: 80px 100px;
-    background-color: #fff;
-    color: #333;
+  padding: 80px 100px;
+  background-color: #fff;
+  color: #333;
+}
+
+#proyek h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #7d2ae8;
+}
+
+.project-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 15px;
+  width: calc(50% - 15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ← fixed rgba() */
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* ← fixed missing closing bracket */
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.project-card p {
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #fff;
+  background: #7d2ae8;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* ============================= */
+/*        RESPONSIVE STYLE      */
+/* ============================= */
+
+/* Untuk tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  #proyek {
+    padding: 60px 40px;
   }
-  
-  #proyek h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #7d2ae8;
-  }
-  
-  .project-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
+
   .project-card {
-    background: #f1f1f1;
-    padding: 20px;
-    border-radius: 15px;
-    width: calc(50% - 15px);
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    transition: 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-card img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
   }
-  
-  .project-card h3 {
-    margin-bottom: 10px;
-    color: #222;
+}
+
+/* Untuk HP (max-width: 480px) */
+@media (max-width: 480px) {
+  #proyek h2 {
+    font-size: 2em;
+    text-align: center;
   }
-  
-  .project-card p {
-    margin-bottom: 15px;
+
+  .project-card {
+    padding: 15px;
   }
-  
+
   .project-card a {
-    text-decoration: none;
-    color: #fff;
-    background: #7d2ae8;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-weight: 500;
+    display: inline-block;
+    font-size: 0.9em;
+    padding: 6px 16px;
   }
+}
 
   #skill {
     padding: 80px 100px;
     background-color: #f9f9f9;
-    color: #333;
+    text-align: center;
   }
   
   #skill h2 {
@@ -246,24 +279,70 @@ header {
   .skills-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
   }
   
   .skill-card {
     background: #fff;
-    border: 2px solid #7d2ae8;
-    padding: 15px 25px;
+    padding: 20px 30px;
     border-radius: 10px;
-    font-weight: 600;
-    color: #7d2ae8;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     transition: 0.3s;
+    min-width: 200px;
+  }
+  
+  .skill-card i {
+    font-size: 1.5em;
+    color: #7d2ae8;
   }
   
   .skill-card:hover {
-    background: #7d2ae8;
-    color: #fff;
+    transform: scale(1.05);
   }
+  
+  /* ============================= */
+  /*        RESPONSIVE STYLE      */
+  /* ============================= */
+  
+  /* Tablet */
+  @media (max-width: 768px) {
+    #skill {
+      padding: 60px 40px;
+    }
+  
+    .skill-card {
+      font-size: 1em;
+      padding: 15px 20px;
+    }
+  
+    .skill-card i {
+      font-size: 1.3em;
+    }
+  }
+  
+  /* HP */
+  @media (max-width: 480px) {
+    #skill h2 {
+      font-size: 2em;
+    }
+  
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skill-card {
+      width: 90%;
+      justify-content: center;
+    }
+  }
+  
 
   #kontak {
     padding: 80px 100px;
@@ -650,3 +729,28 @@ body.dark-mode {
 .form-kontak button:hover {
   background-color: #5e2a84;
 }
+
+/* Animasi muncul dari bawah */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Default: disembunyikan dulu */
+  .skill-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s ease-out;
+  }
+  
+  /* Muncul saat ada class show */
+  .skill-card.show {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
