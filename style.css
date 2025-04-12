@@ -617,3 +617,36 @@ body.dark-mode {
     display: none;
   }
 }
+
+/* form kontak */
+.form-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form-kontak button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-kontak button:hover {
+  background-color: #5e2a84;
+}
