@@ -175,6 +175,34 @@ header {
     line-height: 1.8;
     margin-bottom: 15px;
   }
+  /* Responsif untuk tablet */
+@media (max-width: 1024px) {
+  #tentang {
+    padding: 60px 40px;
+  }
+
+  #tentang p {
+    font-size: 1em;
+  }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  #tentang {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  #tentang h2 {
+    font-size: 2em;
+  }
+
+  #tentang p {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+}
+
 
   #proyek {
   padding: 80px 100px;
@@ -752,5 +780,42 @@ body.dark-mode {
   /* Muncul saat ada class show */
   .skill-card.show {
     animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      font-size: 24px;
+      z-index: 1100;
+      color: #333;
+      cursor: pointer;
+    }
+  
+    .navigation {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: white;
+      flex-direction: column;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+  
+    .navigation.active {
+      display: flex;
+    }
+  
+    .navigation a {
+      margin: 10px 0;
+    }
+  
+    .btn-talk {
+      display: none;
+    }
   }
   

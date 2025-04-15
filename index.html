@@ -36,16 +36,16 @@
       <i class="fas fa-bars"></i>
     </div>
 
-    <header data-animate>
-      <h2 class="logo" data-animate><span>S</span>ahrul.</h2>
+    <header>
+      <h2 class="logo"><span>r</span>uel</h2>
       <nav class="navigation">
-        <a href="#beranda" data-animate>Beranda</a>
-        <a href="#tentang" data-animate>Tentang</a>
-        <a href="#proyek" data-animate>Proyek</a>
-        <a href="#skill" data-animate>Keahlian</a>
-        <a href="#komunitas" data-animate>Komunitas</a>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#skill">Keahlian</a>
+        <a href="#komunitas">Komunitas</a>
       </nav>
-      <a href="#kontak" class="btn-talk" data-animate>Ayo Ngobrol</a>
+      <a href="#kontak" class="btn-talk">Ayo Ngobrol</a>
       
       <input type="checkbox" id="dark-toggle" />
       <label for="dark-toggle" class="toggle-label">
@@ -53,23 +53,23 @@
       </label>
     </header>
 
-    <section class="home" id="beranda" data-animate>
+    <section class="home" id="beranda">
       <div class="content">
         <h2>Halo, saya <span>Sahrul Gunawan</span></h2>
         <h4>Frontend Developer</h4>
         <p>Sedang belajar ngoding dan semangat bikin karya digital.</p>
         <div class="btn-group">
-          <a href="#kontak" data-animate>Hubungi Saya</a>
-          <a href="#proyek" data-animate>Lihat Proyek</a>
+          <a href="#kontak">Hubungi Saya</a>
+          <a href="#proyek">Lihat Proyek</a>
         </div>
-        <div class="social-icons" data-animate>
-          <a href="#" data-animate><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" data-animate><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" data-animate><i class="fa-brands fa-twitter"></i></a>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
       </div>
 
-      <div class="profile-photo" data-animate>
+      <div class="profile-photo">
         <img src="image/ruel.JPG" alt="Foto Sahrul" />
       </div>
     </section>
@@ -315,6 +315,15 @@
     
       animatedElements.forEach(el => animateOnScroll.observe(el));
     </script>
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const nav = document.querySelector('.navigation');
+    
+      toggleBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    </script>
+    
     
     
   </body>
